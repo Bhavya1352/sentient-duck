@@ -34,7 +34,7 @@ function Navbar() {
         <a href="#architecture" className="hover:text-foreground transition-colors">Architecture</a>
         <a href="#security" className="hover:text-foreground transition-colors">Security</a>
         <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
-        <button className="px-4 py-1.5 rounded-full bg-foreground text-background hover:bg-primary-foreground transition-all active:scale-95">
+        <button className="px-4 py-1.5 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all active:scale-95">
           Dashboard
         </button>
       </div>
