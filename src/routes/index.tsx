@@ -15,8 +15,8 @@ export const Route = createFileRoute("/")({
 });
 
 const transcriptLines = [
-  { text: "Initializing audio stream...", style: "text-muted/40 opacity-50" as const },
-  { text: "Okay, so the user login is failing on the production build. The payload looks fine...", style: "text-muted" as const },
+  { text: "Initializing audio stream...", style: "text-muted-foreground/40 opacity-50" as const },
+  { text: "Okay, so the user login is failing on the production build. The payload looks fine...", style: "text-muted-foreground" as const },
   { text: "Wait, is the JWT middleware actually stripping the Auth header? Let me check the config.", style: "text-foreground" as const },
   { text: "Checking auth_middleware.go for header key mismatch", style: "text-foreground border-l-2 border-accent pl-3" as const },
 ];
