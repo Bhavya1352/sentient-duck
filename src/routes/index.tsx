@@ -6,9 +6,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "RubberDuck.ai — The Sentient Co-Pilot" },
-      { name: "description", content: "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence." },
+      {
+        name: "description",
+        content:
+          "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence.",
+      },
       { property: "og:title", content: "RubberDuck.ai — The Sentient Co-Pilot" },
-      { property: "og:description", content: "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence." },
+      {
+        property: "og:description",
+        content:
+          "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence.",
+      },
     ],
   }),
   component: Index,
@@ -16,9 +24,18 @@ export const Route = createFileRoute("/")({
 
 const transcriptLines = [
   { text: "Initializing audio stream...", style: "text-muted-foreground/40 opacity-50" as const },
-  { text: "Okay, so the user login is failing on the production build. The payload looks fine...", style: "text-muted-foreground" as const },
-  { text: "Wait, is the JWT middleware actually stripping the Auth header? Let me check the config.", style: "text-foreground" as const },
-  { text: "Checking auth_middleware.go for header key mismatch", style: "text-foreground border-l-2 border-accent pl-3" as const },
+  {
+    text: "Okay, so the user login is failing on the production build. The payload looks fine...",
+    style: "text-muted-foreground" as const,
+  },
+  {
+    text: "Wait, is the JWT middleware actually stripping the Auth header? Let me check the config.",
+    style: "text-foreground" as const,
+  },
+  {
+    text: "Checking auth_middleware.go for header key mismatch",
+    style: "text-foreground border-l-2 border-accent pl-3" as const,
+  },
 ];
 
 function Navbar() {
@@ -31,9 +48,15 @@ function Navbar() {
         </span>
       </div>
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-        <a href="#architecture" className="hover:text-foreground transition-colors">Architecture</a>
-        <a href="#security" className="hover:text-foreground transition-colors">Security</a>
-        <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
+        <a href="#architecture" className="hover:text-foreground transition-colors">
+          Architecture
+        </a>
+        <a href="#security" className="hover:text-foreground transition-colors">
+          Security
+        </a>
+        <a href="#pricing" className="hover:text-foreground transition-colors">
+          Pricing
+        </a>
         <button className="px-4 py-1.5 rounded-full bg-foreground text-background hover:bg-foreground/90 transition-all active:scale-95">
           Dashboard
         </button>
@@ -50,14 +73,16 @@ function HeroSection({ onStart }: { onStart: () => void }) {
         style={{ filter: "blur(120px)" }}
       />
 
-      <div className="relative max-w-3xl mx-auto" style={{ animation: "stream-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both" }}>
+      <div
+        className="relative max-w-3xl mx-auto"
+        style={{ animation: "stream-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) both" }}
+      >
         <h1 className="text-6xl md:text-8xl font-light tracking-tighter text-balance leading-[0.9] font-sans">
-          The sentient{" "}
-          <span className="font-serif italic">confidant</span>{" "}
-          for your codebase.
+          The sentient <span className="font-serif italic">confidant</span> for your codebase.
         </h1>
         <p className="mt-8 text-xl text-muted-foreground max-w-xl mx-auto text-pretty font-light">
-          Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence.
+          Speak your logic out loud. RubberDuck listens, understands your repository context, and
+          writes the patch before you finish your sentence.
         </p>
 
         <div className="mt-12 flex flex-col items-center gap-6">
@@ -73,7 +98,9 @@ function HeroSection({ onStart }: { onStart: () => void }) {
               </div>
             </div>
             <div className="text-left">
-              <div className="text-xs uppercase tracking-widest text-accent font-bold">Live Interface</div>
+              <div className="text-xs uppercase tracking-widest text-accent font-bold">
+                Live Interface
+              </div>
               <div className="text-xl font-medium">Start Listening</div>
             </div>
           </button>
@@ -90,10 +117,15 @@ function TranscriptRail({ visibleCount }: { visibleCount: number }) {
   return (
     <aside className="col-span-12 lg:col-span-3 space-y-4">
       <div className="flex items-center justify-between px-2">
-        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground">Live Stream</h3>
+        <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold text-muted-foreground">
+          Live Stream
+        </h3>
         <div className="flex gap-1">
           <div className="size-1 bg-accent rounded-full animate-pulse" />
-          <div className="size-1 bg-accent rounded-full animate-pulse" style={{ animationDelay: "200ms" }} />
+          <div
+            className="size-1 bg-accent rounded-full animate-pulse"
+            style={{ animationDelay: "200ms" }}
+          />
         </div>
       </div>
       <div className="h-[400px] bg-panel/50 border border-border rounded-2xl p-4 overflow-hidden relative">
@@ -195,7 +227,8 @@ function OrbCenter({ active }: { active: boolean }) {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(circle at 50% 50%, oklch(0.72 0.16 55 / 0.05) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle at 50% 50%, oklch(0.72 0.16 55 / 0.05) 0%, transparent 70%)",
         }}
       />
 
@@ -261,7 +294,9 @@ function AiSuggestionCard({ visible }: { visible: boolean }) {
 
       <div
         className={`bg-panel border rounded-2xl p-4 transition-all duration-700 ${
-          visible ? "border-accent/30 opacity-100 translate-y-0" : "border-border opacity-0 translate-y-4"
+          visible
+            ? "border-accent/30 opacity-100 translate-y-0"
+            : "border-border opacity-0 translate-y-4"
         }`}
         style={{ boxShadow: "0 8px 32px oklch(0 0 0 / 0.4)" }}
       >
@@ -270,8 +305,8 @@ function AiSuggestionCard({ visible }: { visible: boolean }) {
           <span className="text-xs font-bold uppercase tracking-wider">Header Mismatch Found</span>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
-          The middleware expects <code className="text-foreground">X-Auth-Token</code> but the client sends{" "}
-          <code className="text-foreground">Authorization</code>.
+          The middleware expects <code className="text-foreground">X-Auth-Token</code> but the
+          client sends <code className="text-foreground">Authorization</code>.
         </p>
 
         {/* Code Diff */}
@@ -294,10 +329,14 @@ function AiSuggestionCard({ visible }: { visible: boolean }) {
       </div>
 
       <div className="bg-panel/40 border border-border rounded-2xl p-4 opacity-50">
-        <span className="text-[10px] font-mono uppercase text-muted-foreground">Context Search</span>
+        <span className="text-[10px] font-mono uppercase text-muted-foreground">
+          Context Search
+        </span>
         <div className="mt-2 flex flex-wrap gap-1.5">
           <span className="px-2 py-1 rounded bg-white/5 text-[10px] font-mono">jwt.io</span>
-          <span className="px-2 py-1 rounded bg-white/5 text-[10px] font-mono">config/auth.yml</span>
+          <span className="px-2 py-1 rounded bg-white/5 text-[10px] font-mono">
+            config/auth.yml
+          </span>
           <span className="px-2 py-1 rounded bg-white/5 text-[10px] font-mono">middleware.ts</span>
         </div>
       </div>
@@ -337,7 +376,9 @@ function HowItWorks() {
             key={i}
             className="bg-panel border border-border rounded-2xl p-6 hover:border-accent/30 transition-colors"
           >
-            <span className="text-[10px] font-mono uppercase tracking-widest text-accent">{step.num}</span>
+            <span className="text-[10px] font-mono uppercase tracking-widest text-accent">
+              {step.num}
+            </span>
             <h3 className="mt-3 text-xl font-medium">{step.title}</h3>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
           </div>
@@ -383,7 +424,7 @@ function Index() {
       setTimeout(() => setTranscriptVisible(2), 800),
       setTimeout(() => setTranscriptVisible(3), 2000),
       setTimeout(() => setTranscriptVisible(4), 3500),
-      setTimeout(() => setSuggestionVisible(true), 4500)
+      setTimeout(() => setSuggestionVisible(true), 4500),
     );
 
     return () => timers.forEach(clearTimeout);

@@ -78,10 +78,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "RubberDuck.ai — The Sentient Co-Pilot" },
-      { name: "description", content: "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence." },
+      {
+        name: "description",
+        content:
+          "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence.",
+      },
       { name: "author", content: "RubberDuck.ai" },
       { property: "og:title", content: "RubberDuck.ai — The Sentient Co-Pilot" },
-      { property: "og:description", content: "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence." },
+      {
+        property: "og:description",
+        content:
+          "Speak your logic out loud. RubberDuck listens, understands your repository context, and writes the patch before you finish your sentence.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@RubberDuckAI" },
